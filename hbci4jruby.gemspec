@@ -5,7 +5,7 @@ require 'hbci4jruby/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "hbci4jruby"
-  spec.version       = Hbci4jruby::VERSION
+  spec.version       = Hbci4Jruby::VERSION
   spec.authors       = ["Jens Bissinger"]
   spec.email         = ["mail@jens-bissinger.de"]
   spec.summary       = %q{HBCI library based on HBCI4Java.}
