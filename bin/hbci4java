@@ -1,0 +1,35 @@
+#!/usr/bin/env jruby
+
+require 'json'
+require File.join(File.dirname(__FILE__), '..', 'lib', 'hbci4jruby')
+
+def usage
+  STDOUT.puts("Usage #{__FILE__} <action> <params-json-string-or-file> <passport-json-string-or-file>")
+end
+
+def load_json_arg arg
+  data = File.exists?(arg) ? File.read(arg) : arg
+  JSON.parse(data)
+end
+
+if ARGV.size != 3
+  STDERR.puts("Insufficient arguments")
+  usage
+  exit 1
+end
+
+action    = ARGV[0]
+params    = load_json_arg(ARGV[1])
+passport  = load_json_arg(ARGV[2])
+
+banking_passport = Hbci4Jruby::BankingPassport.new
+banking_passport.attributes = passport
+
+if action === 'turnover'
+  list = Hbci4Jruby::Turnover.new.list(banking_passport, params)
+  STDOUT.puts(JSON.dump(list))
+else
+  STDERR.puts("Unknow action #{action}")
+  usage
+  exit 1
+end
