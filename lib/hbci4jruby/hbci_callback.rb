@@ -1,4 +1,4 @@
-module Hbci4Jruby
+module Hbci4jruby
   class HBCICallback < AbstractHBCICallback
     @@status_names = {}
     constants.each { |c| @@status_names[const_get(c)] = c }

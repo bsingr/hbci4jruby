@@ -11,7 +11,7 @@ require File.join(File.dirname(__FILE__), 'hbci4jruby', 'banking_passport')
 require File.join(File.dirname(__FILE__), 'hbci4jruby', 'hbci_callback')
 require File.join(File.dirname(__FILE__), 'hbci4jruby', 'turnover')
 
-HBCIUtils.init(nil, Hbci4Jruby::HBCICallback.new)
+HBCIUtils.init(nil, Hbci4jruby::HBCICallback.new)
 HBCIUtils.setParam("client.product.name","HBCI4Java")
 HBCIUtils.setParam("client.product.version","2.5")
 HBCIUtils.setParam("client.passport.default","PinTan")
@@ -21,5 +21,5 @@ HBCIUtils.setParam("client.passport.PinTan.checkcert","1")
 HBCIUtils.setParam("client.passport.PinTan.init","1")
 HBCIUtils.setParam("client.passport.PinTan.filename", 'pintan.dat')
 
-module Hbci4Jruby
+module Hbci4jruby
 end

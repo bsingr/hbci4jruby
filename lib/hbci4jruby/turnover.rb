@@ -1,6 +1,6 @@
 require 'date'
 
-module Hbci4Jruby
+module Hbci4jruby
   class Turnover
     # Umsätze von start_date bis end_date abrufen
     # * passport_type, passphrase, pin und file kommen in dieser Implementation aus der zugrunde liegenden Tabelle.

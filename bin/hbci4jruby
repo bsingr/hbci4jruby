@@ -22,11 +22,11 @@ action    = ARGV[0]
 params    = load_json_arg(ARGV[1])
 passport  = load_json_arg(ARGV[2])
 
-banking_passport = Hbci4Jruby::BankingPassport.new
+banking_passport = Hbci4jruby::BankingPassport.new
 banking_passport.attributes = passport
 
 if action === 'turnover'
-  list = Hbci4Jruby::Turnover.new.list(banking_passport, params)
+  list = Hbci4jruby::Turnover.new.list(banking_passport, params)
   STDOUT.puts(JSON.dump(list))
 else
   STDERR.puts("Unknow action #{action}")

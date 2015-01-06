@@ -1,4 +1,4 @@
-module Hbci4Jruby
+module Hbci4jruby
   class BankingPassport
     attr_accessor :hbci_version, :pin, :user_id, :customer_id,
                   :country_code, :port, :host, :filter,

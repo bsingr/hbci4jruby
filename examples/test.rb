@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), '..', 'lib', 'hbci')
 
-include Hbci4Jruby
+include Hbci4jruby
 
 banking_passport = BankingPassport.new
 banking_passport.hbci_version    = '300'
