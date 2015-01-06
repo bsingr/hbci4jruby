@@ -2,6 +2,10 @@
 
 TODO: Write a gem description
 
+## Development
+
+The JAR file was built using [HBCI4Java](https://github.com/willuhn/hbci4java).
+
 ## Installation
 
 Add this line to your application's Gemfile:
