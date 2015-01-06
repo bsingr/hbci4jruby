@@ -25,7 +25,7 @@ module Hbci4jruby
         retData.replace(0, retData.length, answer)
       else
         case reason
-          when NEED_PASSPHRASE_LOAD then retData.replace(0, retData.length, passphrase)
+          when NEED_PASSPHRASE_LOAD then retData.replace(0, retData.length, "foo")
           when NEED_PASSPHRASE_SAVE then retData.replace(0, retData.length, "foo")
           when NEED_PT_PIN then retData.replace(0, retData.length, pin)
           when NEED_PT_TAN then retData.replace(0, retData.length, tan)
